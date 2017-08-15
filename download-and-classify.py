@@ -23,8 +23,10 @@ while True:
 
     finder = ImageFinder()
     image = finder.find_random_image()
-    exists = meta.image_exists_locally(image.filename)
 
+    exists = meta.check_if_image_exists_locally(image['filename'])
+    print('exists:', exists)
+    break
     if not exists:
 
         classifier = ImageClassifier()
