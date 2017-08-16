@@ -70,7 +70,13 @@ while True:
 
         print('Successfully downloaded ' + image['filename'])
 
-        classification = classifier.classify(path_to_image)
+        try:
+            classification = classifier.classify(path_to_image)
+        except ValueError as e:
+            print('An exception was raised while analysing the image:')
+            print(str(e))
+            continue
+
         data = {
             'filename':       image['filename'],
             'image_path':     path_to_image,
@@ -79,5 +85,6 @@ while True:
         }
 
         metadata.save(data)
+        del classifier
 
-    # break  # for now
+    break  # for now
