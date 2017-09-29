@@ -27,7 +27,7 @@ class ImageWriter:
                     cover.save(thumbnail_path, image.format)
 
         except BaseException as e:
-            # any problems? just ignore them .. so a bit like my old boss in that respect
+            # any problems? probably just ignore them for now - look the other way
             print('Something went a bit wrong saving the thumbnail')
             print(str(e))
             return ''

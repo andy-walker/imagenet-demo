@@ -20,7 +20,7 @@ from classifier.ImageClassifier import *
 from classifier.ImageFinder import *
 from classifier.ImageMetadata import *
 from classifier.ImageProcurer import *
-from classifier.ImageWriter import *\
+from classifier.ImageWriter import *
 
 metadata = ImageMetadata(Database())
 metadata.initialize()
